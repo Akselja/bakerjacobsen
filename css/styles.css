@@ -141,10 +141,9 @@ button:active {
 .paragraph {
     margin-top: 10px;
 }
-#productPreview {
+#products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 .productCard {
     display: flex;
