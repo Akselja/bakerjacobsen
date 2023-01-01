@@ -96,7 +96,7 @@ button:active {
     border-bottom: solid black 3px;
     display: flex;
     padding: 20px;
-    align-items: baseline;
+    align-items: center;
     background-color: white;
 }
 .navFixed {
@@ -125,12 +125,44 @@ button:active {
 .hide {
     display: none !important;
 }
+.cartImg {
+    height: 49px;
+    border: solid black 1px;
+    border-radius: 100%;
+    margin-top: 1.6px;
+    background-color: #EAB464;
+    transition: background-color .2s ease-in-out;
+}
+.cartImg:hover {
+    background-color: #ffd08a;
+    transition: background-color .2s ease-in-out;
+}
+.cartNotification {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-left: 33px;
+    top: 53px;
+    background: white;
+    font-size: 20px;
+    text-align: center;
+    width: 21px;
+    height: 21px;
+}
+.cartMainpageBanner {
+    top: calc(100vh - 40px);
+}
 
 
 
 /* main styles */
 .main {
     padding: 0 20px 40px 20px;
+}
+.cartMain {
+    margin: 0 90px 0 90px;
+    padding: 40px 20px 40px 20px;
+    text-align: center;
 }
 .textCenter {
     text-align: center;
@@ -145,33 +177,47 @@ button:active {
     margin: 10px 0;
 }
 .cardImg {
-    margin: 10px 0 0 0;
-    width: calc(25vw - 80px);
+    margin: 20px 0 10px 0;
+    width: calc(25vw - 120px);
     height: auto;
     border-radius: 15px;
 }
 .cardBtn {
+    margin: 20px 0 0 0;
     margin-top: auto;
 }
 
 
 /* product styles */
+.productsIntro {
+    padding-bottom: 0 !important;
+}
 #productsPreview {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 .productDropdown {
     width: calc(100%);
-    margin: 20px auto 0 auto;
+    margin: 40px auto 0 auto;
+    border-radius: 0;
 }
 .dropdownSelected {
-    border-radius: 18px 18px 0 0;
     border-bottom: none;
+}
+.dropdownArrow {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    transition: transform ease-out .15s;
+    transform-origin: 6.71665px 19.2px;
+}
+.arrowAnimated {
+    transform: rotate(90deg);
+    transition: transform ease-out .15s;
 }
 .productSection {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border: solid black 1px;
-    padding: 10px;
+    padding: 30px 0 0 0;
     border-radius: 0 0 18px 18px;
     display: none;
 }
@@ -181,10 +227,97 @@ button:active {
 .productCard {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 20px 40px 20px;
     padding: 10px;
     border: solid black 2px;
     border-radius: 20px;
+}
+
+
+/* login styles */
+.loginIntro {
+    text-align: center;
+}
+#loginSection {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.loginRadio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.loginRadioDiv {
+    margin: 0 5px 10px 5px;
+}
+.formDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 34vw 0 34vw;
+}
+.loginLineDistance {
+    margin: 0 0 5px 0;
+}
+.loginForm {
+    margin-bottom: 90px;
+}
+.signupForm {
+    margin-bottom: 50px;
+}
+.formBtn {
+    padding: 2px 30px;
+}
+
+
+/* cart styles */
+#cartTitleSection {
+    margin: 0 0 30px 0;
+}
+#cartSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px;
+}
+.altCardScrollBtn {
+    position: absolute;
+    right: 350px;
+    top: 165px;
+}
+.altCard {
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 10px;
+}
+.cardCol {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+.altCardImg {
+    margin: 0 10px;
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+}
+.altCardTitle {
+    margin: 0 20px;
+}
+.altCardPriceDiv {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 

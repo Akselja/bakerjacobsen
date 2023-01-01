@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>Logg Inn - Baker Jacobsen</title>
+    <title>Søkeresultat - Baker Jacobsen</title>
 </head>
 <body>
     <header>
+        <!-- navbar -->
         <nav id="nav">
-            <a href="../index.html"><h2 class="title textShadow">Baker Jacobsen</h2></a>
+            <a href="../index.html"><h2 aria-hidden="true" class="title textShadow">Baker Jacobsen</h2></a>
             
             <a class="buttonAnchor" href="./products.html"><button aria-hidden="true" class="navButton">Produkter</button></a>
 
-            <a class="buttonAnchor" href="./cart.html"><button aria-hidden="true" class="navButton">Handlekurv</button></a>
-
             <a class="buttonAnchor" href="./login.html"><button aria-hidden="true" class="navButton">Logg Inn</button></a>
+
+            <a class="buttonAnchor" href="./cart.html"><img class="cartImg" src="../img/cartIcon.png" alt=""><div class="cartNotification">9</div></a>
 
             <label class="searchLabel" for="search">Søk:</label>
             <input type="text" name="search" id="search">
         </nav>
         <div class="navPlaceholder hide"></div>
     </header>
+
+    <main class="cartMain">
+        <section id="cartSection">
+            <h2 class="title textShadow">Din Handlevogn</h2>
+        </section>
+    </main>
 </body>
 </html>

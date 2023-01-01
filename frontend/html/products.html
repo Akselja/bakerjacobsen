@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,14 +16,15 @@
 </head>
 <body>
     <header>
+        <!-- navbar -->
         <nav id="nav">
             <a href="../index.html"><h2 aria-hidden="true" class="title textShadow">Baker Jacobsen</h2></a>
             
             <a class="buttonAnchor" href="./products.html"><button aria-hidden="true" class="navButton">Produkter</button></a>
 
-            <a class="buttonAnchor" href="./cart.html"><button aria-hidden="true" class="navButton">Handlekurv</button></a>
-
             <a class="buttonAnchor" href="./login.html"><button aria-hidden="true" class="navButton">Logg Inn</button></a>
+
+            <a class="buttonAnchor" href="./cart.html"><img class="cartImg" src="../img/cartIcon.png" alt=""><div class="cartNotification">9</div></a>
 
             <label class="searchLabel" for="search">Søk:</label>
             <input type="text" name="search" id="search">
@@ -32,13 +33,15 @@
     </header>
     
     <main class="main">
-        <section id="intro">
+        <!-- intro section (title) -->
+        <section id="intro" class="productsIntro">
             <h2 class="title textShadow">Produkter</h2>
             <p class="paragraph">Bla gjennom produkter</p>
         </section>
+        <!-- products section (dropdowns for sections, four in total) -->
         <section id="products">
-            <button class="productDropdown">Kjøkkenutstyr</button>
-            <div class="productSection">
+            <button class="productDropdown dropdownSelected"><p class="dropdownArrow arrowAnimated">></p> Kjøkkenutstyr</button>
+            <div class="productSection prodSectionSelected">
                 <div class="productCard">
                     <h4 class="textShadow"></h4>
                     <img class="cardImg" src="./img/productImg/japanese-knife.jpg" alt="">
@@ -88,19 +91,27 @@
                     <button class="cardBtn">Bestill</button>
                 </div>
             </div>
-            <button class="productDropdown">Ingredienser</button>
+            <button class="productDropdown"><p class="dropdownArrow">></p> Ingredienser</button>
             <div class="productSection">
                 
             </div>
-            <button class="productDropdown">Oppskrifter</button>
+            <button class="productDropdown"><p class="dropdownArrow">></p> Oppskrifter</button>
             <div class="productSection">
 
             </div>
-            <button class="productDropdown">Ferdigvarer</button>
+            <button class="productDropdown"><p class="dropdownArrow">></p> Ferdigvarer</button>
             <div class="productSection">
 
             </div>
         </section>
     </main>
+    <!-- footer -->
+    <footer>
+        <div id="footer">
+            <h3 class="title textShadow">Kontakt oss</h3>
+            <p>Email:   aksel4455@gmail.com</p>
+            <p>Github:  <a class="footerLink" href="https://github.com/Akselja?tab=repositories">github.com/Akselja</a></p>
+        </div>
+    </footer>
 </body>
 </html>

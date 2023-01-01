@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- scripts -->
+    <script src="../js/loginPage.js" defer></script>
+
+    <title>Logg Inn - Baker Jacobsen</title>
+</head>
+<body>
+    <header>
+        <!-- navbar -->
+        <nav id="nav">
+            <a href="../index.html"><h2 aria-hidden="true" class="title textShadow">Baker Jacobsen</h2></a>
+            
+            <a class="buttonAnchor" href="./products.html"><button aria-hidden="true" class="navButton">Produkter</button></a>
+
+            <a class="buttonAnchor" href="./login.html"><button aria-hidden="true" class="navButton">Logg Inn</button></a>
+
+            <a class="buttonAnchor" href="./cart.html"><img class="cartImg" src="../img/cartIcon.png" alt=""><div class="cartNotification">9</div></a>
+
+            <label class="searchLabel" for="search">Søk:</label>
+            <input type="text" name="search" id="search">
+        </nav>
+        <div class="navPlaceholder hide"></div>
+    </header>
+
+    <main class="main">
+        <!-- introduction section (title) -->
+        <section id="intro" class="loginIntro">
+            <h2 class="title textShadow">Logg inn/Registrer</h2>
+        </section>
+        <!-- main section (login/signup switch button and input) -->
+        <section id="loginSection">
+            <!-- login switch -->
+            <div class="loginRadio">
+                <div class="loginRadioDiv">
+                    <input type="radio" name="login" id="loginR" class="radios" checked>
+                    <label for="loginR">Logg Inn</label>
+                </div>
+                <div class="loginRadioDiv">
+                    <input type="radio" name="login" id="signupR" class="radios">
+                    <label for="signupR">Registrer</label>
+                </div>
+            </div>
+            <!-- login form -->
+            <form class="loginForm">
+                <div class="formDiv">
+                    <label class="loginLineDistance" for="UsernameLogin">Brukernavn:</label>
+                    <input class="loginLineDistance" type="text" name="UsernameLogin" id="UsernameLogin">
+
+                    <label class="loginLineDistance" for="PasswordLogin">Passord:</label>
+                    <input class="loginLineDistance" type="password" name="PasswordLogin" id="PasswordLogin">
+                </div>
+                <button type="submit" class="formBtn">Logg Inn</button>
+            </form>
+            <!-- signup form -->
+            <form class="signupForm hide">
+                <div class="formDiv">
+                    <label class="loginLineDistance" for="UsernameSignup">Brukernavn:</label>
+                    <input class="loginLineDistance" type="text" name="UsernameSignup" id="UsernameSignup">
+
+                    <label class="loginLineDistance" for="EmailSignup">Email:</label>
+                    <input class="loginLineDistance" type="email" name="EmailSignup" id="EmailSignup">
+
+                    <label class="loginLineDistance" for="PasswordSignup">Passord</label>
+                    <input class="loginLineDistance" type="password" name="PasswordSignup" id="PasswordSignup">
+                </div>
+                <button type="submit" class="formBtn">Registrer</button>
+            </form>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div id="footer">
+            <h3 class="title textShadow">Kontakt oss</h3>
+            <p>Email:   aksel4455@gmail.com</p>
+            <p>Github:  <a class="footerLink" href="https://github.com/Akselja?tab=repositories">github.com/Akselja</a></p>
+        </div>
+    </footer>
+</body>
+</html>
