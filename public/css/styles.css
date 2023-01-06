@@ -1,0 +1,351 @@
+/* fonts */
+@font-face {
+    font-family: "AveriaSerif";
+    src: url(../fonts/AveriaSerifLibre-Regular.ttf);
+}
+@font-face {
+    font-family: "Sura";
+    src: url(../fonts/Sura-Regular.ttf);
+}
+@font-face {
+    font-family: "Taviraj";
+    src: url(../fonts/Taviraj-MediumItalic.ttf);
+}
+
+
+/* general styles */
+h1 {
+    font-size: 5rem;
+    font-family: "Taviraj";
+}
+h2 {
+    font-size: 3rem;
+    font-family: "Taviraj";
+}
+h3 {
+    font-size: 2.5rem;
+    font-family: "Taviraj";
+}
+h4 {
+    font-size: 2rem;
+    font-family: "Taviraj";
+}
+p, a, button, label{
+    font-size: 1.5rem;
+    font-family: "Sura";
+    text-decoration: none;
+    color: black;
+}
+input {
+    font-size: 1.2rem;
+    font-family: "Sura";
+    color: black;
+}
+button {
+    padding: 5px 5px 4px 5px;
+    border: solid black 1px;
+    border-radius: 18px;
+    background-color: #EAB464;
+    transition: background-color .2s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #ffd08a;
+    transition: background-color .2s ease-in-out;
+}
+button:active {
+    outline: solid 2px rgb(91, 91, 255);
+}
+
+.textShadow {
+    text-shadow: 2px 2px 0 rgb(179, 179, 179);
+}
+
+
+/* banner styles */
+#banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: calc(65vh - 94px);
+    padding-top: 35vh;
+    background-color: black;
+    background-image: url(../img/top-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bannerImage {
+    width: 100%;
+}
+.bannerTextDiv {
+    position: absolute;
+    top: 35vh;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+}
+.bannerText {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+
+/* navbar styles */
+#nav {
+    border-bottom: solid black 3px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+}
+.navFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.buttonAnchor {
+    border-radius: 18px;
+    padding: 0;
+    margin: 0 5px;
+}
+.buttonAnchor:active {
+    outline: solid 2px rgb(91, 91, 255);
+}
+.title {
+    margin: 0 20px 0 0;
+}
+.searchLabel {
+    margin: 0 5px 0 10px;
+}
+.navPlaceholder {
+    height: 97px;
+}
+.hide {
+    display: none !important;
+}
+.cartImg {
+    height: 49px;
+    border: solid black 1px;
+    border-radius: 100%;
+    margin-top: 1.6px;
+    background-color: #EAB464;
+    transition: background-color .2s ease-in-out;
+}
+.cartImg:hover {
+    background-color: #ffd08a;
+    transition: background-color .2s ease-in-out;
+}
+.cartNotification {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-left: 33px;
+    top: 53px;
+    background: white;
+    font-size: 20px;
+    text-align: center;
+    width: 21px;
+    height: 21px;
+}
+.cartMainpageBanner {
+    top: calc(100vh - 40px);
+}
+
+
+
+/* main styles */
+.main {
+    padding: 0 20px 40px 20px;
+}
+.cartMain {
+    margin: 0 90px 0 90px;
+    padding: 40px 20px 40px 20px;
+    text-align: center;
+}
+.textCenter {
+    text-align: center;
+}
+#intro {
+    padding: 50px 0 60px 0;
+}
+.paragraph {
+    margin-top: 10px;
+}
+.cardText {
+    margin: 10px 0;
+}
+.cardImg {
+    margin: 20px 0 10px 0;
+    width: calc(25vw - 120px);
+    height: auto;
+    border-radius: 15px;
+}
+.cardBtn {
+    margin: 20px 0 0 0;
+    margin-top: auto;
+}
+
+
+/* product styles */
+.productsIntro {
+    padding-bottom: 0 !important;
+}
+#productsPreview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+.productDropdown {
+    width: calc(100%);
+    margin: 40px auto 0 auto;
+    border-radius: 0;
+}
+.dropdownSelected {
+    border-bottom: none;
+}
+.dropdownArrow {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    transition: transform ease-out .15s;
+    transform-origin: 6.71665px 19.2px;
+}
+.arrowAnimated {
+    transform: rotate(90deg);
+    transition: transform ease-out .15s;
+}
+.productSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: solid black 1px;
+    padding: 30px 0 0 0;
+    border-radius: 0 0 18px 18px;
+    display: none;
+}
+.prodSectionSelected {
+    display: grid;
+}
+.productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 40px 20px;
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 20px;
+}
+
+
+/* login styles */
+.loginIntro {
+    text-align: center;
+}
+#loginSection {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.loginRadio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.loginRadioDiv {
+    margin: 0 5px 10px 5px;
+}
+.formDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 34vw 0 34vw;
+}
+.loginLineDistance {
+    margin: 0 0 5px 0;
+}
+.loginForm {
+    margin-bottom: 90px;
+}
+.signupForm {
+    margin-bottom: 50px;
+}
+.formBtn {
+    padding: 2px 30px;
+}
+
+
+/* cart styles */
+#cartTitleSection {
+    margin: 0 0 30px 0;
+}
+#cartSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px;
+}
+.altCardScrollBtn {
+    position: absolute;
+    right: 350px;
+    top: 165px;
+}
+.altCard {
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 10px;
+}
+.cardCol {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+.altCardImg {
+    margin: 0 10px;
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+}
+.altCardTitle {
+    margin: 0 20px;
+}
+.altCardPriceDiv {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkoutPrice {
+    margin: 10px 0 10px 0;
+}
+
+
+/* search styles */
+#searchResults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.searchIntro {
+    text-align: center;
+}
+
+
+/* footer styles */
+#footer {
+    text-align: center;
+    padding: 20px 300px;
+    border-top: solid black 3px;
+}
+.footerLink {
+    text-decoration: underline;
+    color: blue;
+}
