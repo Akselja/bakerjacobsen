@@ -6,31 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- styles -->
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <!-- scripts -->
-    <script src="../public/js/loginPage.js" defer></script>
+    <script src="/js/loginPage.js" defer></script>
 
     <title>Logg Inn - Baker Jacobsen</title>
 </head>
 <body>
-    <header>
-        <!-- navbar -->
-        <nav id="nav">
-            <a href="../public/index.html"><h2 aria-hidden="true" class="title textShadow">Baker Jacobsen</h2></a>
-            
-            <a class="buttonAnchor" href="../public/products.html"><button aria-hidden="true" class="navButton">Produkter</button></a>
-
-            <a class="buttonAnchor" href="../public/login.html"><button aria-hidden="true" class="navButton">Logg Inn</button></a>
-
-            <a class="buttonAnchor" href="../public/cart.html"><img class="cartImg" src="../public/img/cartIcon.png" alt=""><div class="cartNotification">9</div></a>
-
-            <label class="searchLabel" for="search">Søk:</label>
-            <input type="text" name="search" id="search">
-        </nav>
-        <div class="navPlaceholder hide"></div>
-    </header>
+    <%- include("./partials/nav.ejs") %>
 
     <main class="main">
         <!-- introduction section (title) -->
@@ -77,16 +62,6 @@
             </form>
         </section>
     </main>
-    <!-- footer -->
-    <footer>
-        <div id="footer">
-            <h3 class="title textShadow">Om oss</h3>
-            <p class="paragraph">Vi hos Baker Jacobsen jobber med å lage de beste utvalgene av produkter for baking mulig. Her finner du alt fra oppskrifter til kjøkkenutstyr, med gode priser til hvert produkt.</p>
-            <p class="paragraph">6666 6666 6666 MVA</p>
-            <p class="paragraph">Epost:   aksel4455@gmail.com</p>
-            <p class="paragraph">Telefon: 123 44 321</p>
-            <p class="paragraph">Github:  <a class="footerLink" href="https://github.com/Akselja?tab=repositories">github.com/Akselja</a></p>
-        </div>
-    </footer>
+    <%- include("./partials/footer.ejs") %>
 </body>
 </html>

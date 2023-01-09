@@ -1,6 +1,6 @@
 // login radio
 const loginRadio = document.querySelectorAll(".radios");
-console.log("running")
+
 // login form
 const loginForm = document.querySelector(".loginForm");
 
@@ -27,3 +27,5 @@ loginRadio[1].addEventListener("click", e => {
         signupForm.classList.remove("hide");
     }
 })
+
+module.exports 
