@@ -27,5 +27,3 @@ loginRadio[1].addEventListener("click", e => {
         signupForm.classList.remove("hide");
     }
 })
-
-module.exports 

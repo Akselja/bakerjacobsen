@@ -11,12 +11,29 @@
 
     <!-- scripts -->
     <script src="/js/loginPage.js" defer></script>
+    <script src="/js/passwords.js" defer></script>
 
     <title>Logg Inn - Baker Jacobsen</title>
 </head>
 <body>
-    <%- include("./partials/nav.ejs") %>
-
+    <header>
+        <!-- navbar -->
+        <nav id="nav" class="navFixed">
+            <a href="/"><h2 aria-hidden="true" class="title textShadow">Baker Jacobsen</h2></a>
+            
+            <a class="buttonAnchor" href="/products"><button aria-hidden="true" class="navButton">Produkter</button></a>
+    
+            <a class="buttonAnchor" href="/login"><button aria-hidden="true" class="navButton">Logg Inn</button></a>
+    
+            <a class="buttonAnchor" href="/cart"><img class="cartImg" src="/img/cartIcon.png" alt=""><div class="cartNotification">9</div></a>
+    
+            <label class="searchLabel" for="search">Søk:</label>
+            <input type="text" name="search" id="search">
+    
+            <p></p>
+        </nav>
+        <div class="navPlaceholder"></div>
+    </header>
     <main class="main">
         <!-- introduction section (title) -->
         <section id="intro" class="loginIntro">
@@ -35,31 +52,33 @@
                     <label for="signupR">Registrer</label>
                 </div>
             </div>
+
             <!-- login form -->
-            <form class="loginForm">
+            <form action="/login" method="POST" class="loginForm">
                 <div class="formDiv">
                     <label class="loginLineDistance" for="UsernameLogin">Brukernavn:</label>
-                    <input class="loginLineDistance" type="text" name="UsernameLogin" id="UsernameLogin">
+                    <input class="loginLineDistance" type="text" name="UsernameLogin" id="UsernameLogin" required>
 
                     <label class="loginLineDistance" for="PasswordLogin">Passord:</label>
-                    <input class="loginLineDistance" type="password" name="PasswordLogin" id="PasswordLogin">
+                    <input class="loginLineDistance" type="password" name="PasswordLogin" id="PasswordLogin" required>
                 </div>
                 <button type="submit" class="formBtn">Logg Inn</button>
             </form>
             <!-- signup form -->
-            <form class="signupForm hide">
+            <form action="/login" method="POST" class="signupForm hide">
                 <div class="formDiv">
                     <label class="loginLineDistance" for="UsernameSignup">Brukernavn:</label>
-                    <input class="loginLineDistance" type="text" name="UsernameSignup" id="UsernameSignup">
+                    <input class="loginLineDistance" type="text" name="UsernameSignup" id="UsernameSignup" required>
 
                     <label class="loginLineDistance" for="EmailSignup">Email:</label>
-                    <input class="loginLineDistance" type="email" name="EmailSignup" id="EmailSignup">
+                    <input class="loginLineDistance" type="email" name="EmailSignup" id="EmailSignup" required>
 
-                    <label class="loginLineDistance" for="PasswordSignup">Passord</label>
-                    <input class="loginLineDistance" type="password" name="PasswordSignup" id="PasswordSignup">
+                    <label class="loginLineDistance" for="PasswordSignup">Passord:</label>
+                    <input class="loginLineDistance" type="password" name="PasswordSignup" id="PasswordSignup" required>
                 </div>
                 <button type="submit" class="formBtn">Registrer</button>
             </form>
+            <p class="passWrong passMsg"></p>
         </section>
     </main>
     <%- include("./partials/footer.ejs") %>

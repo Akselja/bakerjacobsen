@@ -270,6 +270,12 @@ button:active {
 .formBtn {
     padding: 2px 30px;
 }
+.passWrong {
+    color: red;
+}
+.passRight {
+    color: blue;
+}
 
 
 /* cart styles */
